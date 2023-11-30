@@ -1,12 +1,24 @@
-<script setup>
-defineProps({
-    nome: String,
-    citta: String,
-    provincia: String,
-    indirizzo: String,
-    stato: String,
-    tipo: String
-})
+<script>
+
+export default {
+    components: {
+
+    },
+    data() {
+        return {};
+    },
+    methods: {},
+    props: ({
+        nome: String,
+        citta: String,
+        provincia: String,
+        indirizzo: String,
+        stato: String,
+        tipo: String
+    })
+}
+
+
 </script>
 
 <template>

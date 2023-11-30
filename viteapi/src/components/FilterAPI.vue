@@ -1,10 +1,22 @@
-<script setup>
+<script>
 import axios from 'axios'
-let keyword = ""
 
-function search() {
-    return;
+export default {
+    components: {
+
+    },
+    data() {
+        return {
+            keyword: 0
+        };
+    },
+    methods: {
+        search: function () {
+            console.log(this.keyword);
+        }
+    },
 }
+
 </script>
 
 <template>
