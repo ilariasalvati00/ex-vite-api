@@ -22,7 +22,6 @@ export default {
     axios.get(api_path).then((risposta) => {
       this.breweries_list = risposta.data;
       this.done = true;
-      console.log(this.done);
     })
   }
 }

@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-            keyword: 0
+            keyword: ""
         };
     },
     methods: {

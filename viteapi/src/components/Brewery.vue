@@ -45,6 +45,6 @@ export default {
 
 .col {
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 calc(100% / 3);
 }
 </style>
