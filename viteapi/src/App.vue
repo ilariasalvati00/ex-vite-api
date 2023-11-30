@@ -14,12 +14,8 @@ axios.get(api_path).then((risposta) => {
 })
 </script>
 
-<template v-if="done==false">
-  <p>Loading...</p>
-</template>
-
-<template v-else>
-  <div>
+<template>
+  <div v-if="done == true">
     <Brewery v-for="(birreria) in breweries_list" :nome="birreria.name" :citta="birreria.city"
       :provincia="birreria.state_province" :indirizzo="birreria.street" :stato="birreria.country"></Brewery>
   </div>
