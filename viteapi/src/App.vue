@@ -12,11 +12,13 @@ export default {
   data() {
     return {
       breweries_list: [],
-      done: false
+      done: false,
     };
   },
   methods: {
-
+    cambia_visualizzazione: function () {
+      this.done = false;
+    }
   },
   mounted: function () {
     axios.get(api_path).then((risposta) => {
@@ -28,12 +30,14 @@ export default {
 </script>
 
 <template>
+  <div>
+    <FilterAPI @update:search_loaded="cambia_visualizzazione()"></FilterAPI>
+  </div>
   <div v-if="done == true">
     <Brewery v-for="(birreria) in breweries_list" :nome="birreria.name" :citta="birreria.city"
       :provincia="birreria.state_province" :indirizzo="birreria.street" :stato="birreria.country"
       :tipo="birreria.brewery_type"></Brewery>
   </div>
-  <div v-else>Loading...</div>
 </template>
 
 <style scoped></style>
